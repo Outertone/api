@@ -1,0 +1,401 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.6 余额查询接口 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../1.5 上行推送接口/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    API文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1.1 短信下发接口/">
+            
+                <a href="../1.1 短信下发接口/">
+            
+                    
+                    1.1 短信下发接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1.2 状态拉取接口/">
+            
+                <a href="../1.2 状态拉取接口/">
+            
+                    
+                    1.2 状态拉取接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1.3 上行拉取接口/">
+            
+                <a href="../1.3 上行拉取接口/">
+            
+                    
+                    1.3 上行拉取接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1.4 状态推送接口/">
+            
+                <a href="../1.4 状态推送接口/">
+            
+                    
+                    1.4 状态推送接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1.5 上行推送接口/">
+            
+                <a href="../1.5 上行推送接口/">
+            
+                    
+                    1.5 上行推送接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1.6 余额查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1.6 余额查询接口</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E0A;&#x884C;&#x63A8;&#x9001;&#x63A5;&#x53E3;">&#x4E0A;&#x884C;&#x63A8;&#x9001;&#x63A5;&#x53E3;</h2>
+<h3 id="&#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF1A;">&#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF1A;</h3>
+<ul>
+<li><a href="http://ip:port/getBalance" target="_blank">http://ip:port/getBalance</a></li>
+</ul>
+<h3 id="&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;">&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;:</h3>
+<ul>
+<li>POST</li>
+</ul>
+<h3 id="&#x8BF7;&#x6C42;&#x53C2;&#x6570;">&#x8BF7;&#x6C42;&#x53C2;&#x6570;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;&#x540D;</th>
+<th style="text-align:center">&#x5FC5;&#x586B;</th>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x53C2;&#x6570;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">uid</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">&#x5BA2;&#x6237;&#x6E20;&#x9053;&#x7F16;&#x53F7; </td>
+</tr>
+<tr>
+<td style="text-align:center">sign</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">&#x6839;&#x636E;&#x5E73;&#x53F0;&#x5206;&#x914D;&#x7684; apikey &#x8FDB;&#x884C;&#x7EC4;&#x5408;&#xFF0C;sign =md5 (uid-yyyyMMddHHmmss-&quot;balance&quot;-&#x5BC6;&#x7801; key),32 &#x4F4D;&#x5927;&#x5199; </td>
+</tr>
+<tr>
+<td style="text-align:center">timeStamp</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">&#x65F6;&#x95F4;&#x6233;,&#x683C;&#x5F0F; YYYYMMDDHHmmss,&#x4E0D;&#x80FD;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x65F6; &#x95F4; 3 &#x5206;&#x949F; </td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x793A;&#x4F8B;&#xFF1A;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x793A;&#x4F8B;&#xFF1A;</h3>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;timeStamp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20180323103400&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;uid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TMHC12353&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;sign&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2DF179D9010334E2F66C8F5D0339911D&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x53C2;&#x6570;&#x540D;</th>
+<th style="text-align:center">&#x5FC5;&#x586B;</th>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x53C2;&#x6570;&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">resCode</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">0000 &#x8868;&#x793A;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td style="text-align:center">resMsg</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">&#x63CF;&#x8FF0;</td>
+</tr>
+<tr>
+<td style="text-align:center">balance</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">&#x4F59;&#x989D;&#x4FE1;&#x606F; </td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x8FD4;&#x56DE;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x793A;&#x4F8B;:</h3>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;resCode&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;resMsg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&#x6210;&#x529F;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;balance&quot;</span><span class="token operator">:</span> <span class="token number">100000</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../1.5 上行推送接口/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1.5 上行推送接口">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.6 余额查询接口","level":"1.2.6","depth":2,"previous":{"title":"1.5 上行推送接口","level":"1.2.5","depth":2,"path":"API文档/1.5 上行推送接口/README.md","ref":"API文档/1.5 上行推送接口/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","-sharing","prism","-highlight","-lunr","-search","search-pro"],"ignores":["node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"lang":{"flow":"json"},"css":["prismjs/themes/prism-okaidia.css"]},"chapter-fold":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"API文档/1.6 余额查询接口/README.md","mtime":"2020-01-03T06:52:24.130Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-05T06:49:55.035Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,20 @@
+{
+  "name": "content",
+  "version": "1.0.0",
+  "description": "编码格式：UTF-8",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-chapter-fold": "^0.0.4",
+    "gitbook-plugin-highlight": "^2.0.3",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-prism": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gitbook build ./content ./docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
