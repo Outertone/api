@@ -1,0 +1,15 @@
+{
+  "language": "zh-hans",
+  "plugins": ["chapter-fold", "-sharing","prism", "-highlight", "-lunr", "-search", "search-pro"],
+  "ignores": ["node_modules"],
+  "pluginsConfig": {
+    "prism": {
+      "lang": {
+        "flow": "json"
+      },
+      "css": [
+        "prismjs/themes/prism-okaidia.css"
+      ]
+    }
+  }
+}
